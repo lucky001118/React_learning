@@ -1,6 +1,6 @@
-#What i learns in react
+# What i learns in react
 
-React App Creation with Vite
+# React App Creation with Vite
 I have gained experience in creating React applications using Vite as a build tool. Vite offers a fast and optimized development environment by leveraging native ES modules and faster build times. Here are some of the highlights and benefits:
 
 Fast Development: Vite offers a highly responsive development experience by reducing the initial server startup time and using native ESM support.
