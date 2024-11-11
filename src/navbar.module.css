@@ -1,0 +1,16 @@
+.navbar{
+    display: flex;
+    color: brown;
+    justify-content: space-evenly;
+}
+
+.navButtons{
+    color: white;
+    background-color: green;
+    border-radius: 5px;
+    border: none;
+    width: auto;
+    height: 35px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgb(0, 0, 0,0.2);
+}
