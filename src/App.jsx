@@ -7,8 +7,15 @@ import Navbar from "./Navbar";
 import Profilepage from "./pages/Profilepage";
 import Settingspage from "./pages/Settingspage";
 import Products from "./pages/Products";
-function App() {
+import { createContext, useState } from "react";
+import Checkout from "./pages/Checkout";
+import Login from "./pages/Login";
 
+  // learning about the Context
+  // stape 1) -- creating the context.
+  export const userContext = createContext();
+function App() {
+  const [user,setUser] = useState("guest");
   return (
     <div className="App">
       <BrowserRouter>
@@ -24,6 +31,12 @@ function App() {
         <Route path="/product/:id" element={<Products />} />
       </Routes>
       </BrowserRouter>
+      {/* stap 2) -- provide the context into this component using the userContext.Provider */}
+      <input type="text" value={user} onChange={(e)=>setUser(e.target.value)} />
+      <userContext.Provider value={{user,setUser}}>
+        <Login />
+      <Checkout />
+      </userContext.Provider>
     </div>
   )
 }
